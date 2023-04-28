@@ -1,0 +1,126 @@
+.container {
+  min-height: 100vh;
+  background-color: #F9F9F9;
+  padding: 2rem;
+}
+
+.dashboard-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.search-input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.job-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-gap: 1rem;
+}
+
+.job-card {
+  width: 350px;
+  background-color: #0000000a;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1200px) {
+  .job-cards {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .job-cards {
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+  }
+}
+
+.job-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.job-company, .job-location {
+  margin: 0;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #777;
+}
+
+.job-details {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.job-details:hover {
+  background-color: #0056b3;
+}
+
+.job-remove {
+  margin-left: 3px;
+  display: inline-block;
+  background-color: #dc3545;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.job-remove:hover {
+  background-color: #b02a37;
+}
+
+.job-clear {
+  display: block;
+  background-color: #dc3545;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.job-clear:hover {
+  background-color: #b02a37;
+}
+
+@keyframes clicked {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button-clicked {
+  animation: clicked 0.2s;
+}

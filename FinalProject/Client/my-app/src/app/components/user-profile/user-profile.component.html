@@ -1,0 +1,19 @@
+<div class="modal-backdrop" (click)="closeModal()" [@fadeInOut]>
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2>{{this.user.name}}</h2>
+    <h5>Email: {{this.user.email}}</h5>
+    <div class="form-group">
+      <label for="userName">Career: {{this.career}}</label>
+      <input type="text" id="userName" [(ngModel)]="career" class="form-control" placeholder="Enter Your Career" required>
+    </div>
+    <div class="form-group">
+      <label for="userEmail">Skills: {{this.skills}}</label>
+      <input type="email" id="userEmail" [(ngModel)]="skills" class="form-control" placeholder="Enter Your Career" required>
+    </div>
+    <div class="form-group text-center">
+      <button id="button" type="submit" class="btn btn-primary" (click)="saveChanges()">Save Changes</button>
+    </div>
+    <button id="exitButton" type="button" class="close-button" (click)="closeModal()">Close</button>
+  </div>
+</div>
+

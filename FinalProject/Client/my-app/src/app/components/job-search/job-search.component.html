@@ -1,0 +1,24 @@
+<div class="job-search">
+  <app-job-details-modal *ngIf="selectedJob" [job]="selectedJob" (closeModalEvent)="selectedJob = null"></app-job-details-modal>
+  <app-navbar></app-navbar>
+  <div class="container">
+    <div class="page-title-wrapper">
+      <h1 class="page-title">Job Search</h1>
+      <button class="right-button" (click)="showRecommendations($event)">Show Recommendations</button>
+    </div>
+    <input type="text" class="search-input" [(ngModel)]="keyword" (input)="searchJobs()" placeholder="Search for jobs..." />
+    <div class="jobs">
+        <div class="job-card" *ngFor="let job of jobs">
+            <h3>{{job.MatchedObjectDescriptor.PositionTitle}}</h3>
+            <p>{{job.MatchedObjectDescriptor.OrganizationName}}</p>
+            <p>Pay Range ({{job.MatchedObjectDescriptor.PositionRemuneration[0].Description}}) : {{job.MatchedObjectDescriptor.PositionRemuneration[0].MinimumRange}} - {{job.MatchedObjectDescriptor.PositionRemuneration[0].MaximumRange}} </p>
+            <button class="job-details-btn" (click)="viewDetails(job)">View Details</button>
+            <button class="job-save-btn" (click)="saveJob(job, $event)">Save</button>
+        </div>
+      </div>
+    </div> 
+    <app-footer class="app-footer"></app-footer>
+</div>
+
+
+

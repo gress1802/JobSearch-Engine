@@ -1,0 +1,21 @@
+<nav class="navbar">
+    <a href="dashboard"><img class="logo" src="../../../assets/images/Logo.png" alt="logo image"></a>
+    <ul class="navbar-menu">
+        <li class="navbar-item">
+            <a href="dashboard" class="navbar-link">Job Seeker Dashboard</a>
+        </li>
+        <li class="navbar-item">
+            <a href="job-search" class="navbar-link">Job Search</a>
+        </li>
+        <li class="navbar-item">
+            <a href="profile-management" class="navbar-link">Profile Management</a>
+        </li>
+        <li class="navbar-item" *ngIf="isAdmin$ | async">
+            <a href="user-management" class="navbar-link">User Management</a>
+        </li>
+        <li class="navbar-item">
+            <a href="market-analysis" class="navbar-link">Market Analysis</a>
+        </li>
+    </ul>
+    <button class="logout-btn" (click)="logout()" >Logout</button>
+</nav>

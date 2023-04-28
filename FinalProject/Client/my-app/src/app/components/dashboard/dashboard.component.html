@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h1 class="dashboard-title">Job Seeker Dashboard</h1>
+  <input type="text" class="search-input" [(ngModel)]="query" (input)="searchJobList()" placeholder="Search saved jobs..." />
+  <div class="job-cards">
+    <div class="job-card" *ngFor="let job of jobs">
+      <h2 class="job-title">{{ job.position_title }}</h2>
+      <p class="job-company">{{ job.organization_name }}</p>
+      <p class="job-location"> {{ job.location }} </p>
+      <button class="job-details" (click)="viewDetails(job)">View Details</button>
+      <button class="job-remove" (click)="removeSavedJob(job)">Remove</button>
+    </div>
+  </div>
+  <button class="job-clear" (click)="removeAllSavedJobs($event)">Clear Saved Jobs</button>
+</div>
+<app-footer></app-footer>
+<app-job-details-modal *ngIf="selectedJob" [job]="selectedJob" (closeModalEvent)="selectedJob = null"></app-job-details-modal>

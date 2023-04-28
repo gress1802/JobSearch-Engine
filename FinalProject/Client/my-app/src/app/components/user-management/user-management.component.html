@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<app-user-details-modal *ngIf="selectedUser" [user]="selectedUser" (closeModalEvent)="selectedUser = null"></app-user-details-modal>
+<div class="container">
+  <h1 class="page-title">User Management</h1>
+  <input type="text" [(ngModel)]="searchQuery" (input)="searchUsers()" class="search-input" placeholder="Search for users..." />
+  <div class="users">
+    <div class="user-card" *ngFor="let user of users">
+      <div class="user-name"><strong>Username:</strong> {{user.name}}</div>
+      <div class="user-email"><strong>Email:</strong> {{user.email}}</div>
+      <div class="user-role"><strong>Role:</strong> {{user.role}}</div>
+      <button class="user-details-btn" (click)="viewDetails(user)">View Details</button>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+

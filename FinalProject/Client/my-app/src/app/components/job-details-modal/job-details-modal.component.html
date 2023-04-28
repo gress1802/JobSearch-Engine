@@ -1,0 +1,12 @@
+<div *ngIf="job" class="modal-backdrop" (click)="onCloseModal()" [@fadeInOut]>
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <h2>{{ job.title }}</h2>
+        <p><strong>Company: &nbsp; </strong> {{ job.MatchedObjectDescriptor.OrganizationName }}</p>
+        <p><strong>Location: &nbsp; </strong> {{ job.MatchedObjectDescriptor.PositionLocationDisplay }}</p>
+        <p><strong>Description: &nbsp; </strong>{{ job.MatchedObjectDescriptor.UserArea.Details.JobSummary }}</p>
+        <p><strong>Qualifications: &nbsp; </strong>{{ job.MatchedObjectDescriptor.QualificationSummary }}</p>
+        <p><strong>Link: &nbsp; </strong><a target="_blank" href="{{ job.MatchedObjectDescriptor.PositionURI }}">Redirect to Application and More Information</a></p>
+        <button class="closeModalButton" (click)="onCloseModal()">X</button>
+    </div>
+</div>
+

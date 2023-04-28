@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<div class="user-profile-container">
+  <h1>{{this.user.name}}</h1>
+  <div class="user-details">
+    <h2>Current Details</h2>
+    <p><strong>Career: {{this.career}}</strong> </p>
+    <p><strong>Skills: {{this.skills}}</strong> </p>
+    <button (click)="openUserProfileModal()">View/Edit Profile</button>
+    <app-user-profile *ngIf="showUserProfileModal" (closeModalEvent)="closeUserProfileModal()"></app-user-profile>
+  </div>
+</div>
+<app-footer></app-footer>
+
+

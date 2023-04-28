@@ -1,0 +1,114 @@
+#back {
+    height: 100vh;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background: #1c1c1c;
+    max-width: 100%;
+}
+
+app-footer {
+    max-width: 100%;
+    min-width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.header {
+    padding: 15px 0;
+    background-color: #19385a;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 28px;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.header-text {
+    margin: 0;
+    width:10%;
+}
+
+.logo {
+    height: 70px;
+    width: 70px;
+    border-radius: 10px;
+}
+
+.login-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    background-color: white;
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #4C4452;
+    border-color: #afafaf;
+    font-size: 16px;
+}
+
+.btn-secondary {
+    background-color: #4C4452;
+    border-color: #afafaf;
+    font-size: 16px;
+    margin-left: 3px;
+}
+
+.flexItems {
+    display: flex;
+    align-items: center;
+    height: 85px;
+    background-color: #3367a9;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.intro-text {
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 250px); 
+    transform: translateX(-50%);
+    max-width: 90%; 
+}
+
+@media screen and (max-width: 991px) {
+    .header-text{
+        visibility: hidden
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .header-text {
+        font-size: small;
+    }
+}
+
+.falseLogin {
+    color: red;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+
+

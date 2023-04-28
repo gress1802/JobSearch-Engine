@@ -1,0 +1,35 @@
+<div id="back">
+    <header class="header">
+        <div class="container flexItems">
+            <img class="logo" src="../../../assets/images/Logo.png" alt="Logo">
+            <h1 class="header-title">Job Search Engine</h1>
+            <p class="header-text">Welcome! Please login to access your account.</p>
+        </div>
+    </header>
+    <div>
+        <div class="container mt-5">
+            <div class="col-md-6">
+                <div class="card login-card">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">Login</h2>
+                        <h2 class="falseLogin" *ngIf="falseLogin">Wrong email or password!</h2>
+                        <div class="form-group mb-3">
+                            <label for="email">Email:</label>
+                            <input [(ngModel)]="email" type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="password">Password:</label>
+                            <input [(ngModel)]="password" type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                        </div>
+                            <div class="form-group text-center">
+                            <button (click)="login()" class="btn btn-primary">Login</button>
+                            <button type="button" class="btn btn-secondary" (click)="openRegisterModal()">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-register-modal *ngIf="showRegisterModal" [showModal]="showRegisterModal" (closeModalEvent)="closeRegisterModal()"></app-register-modal>
+    <app-footer></app-footer>
+</div>

@@ -1,0 +1,46 @@
+.user-profile-container {
+  min-height: 40vh;
+  width: 30vw;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.mainContainer {
+  width: 20%;
+}
+
+.user-details {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+h1, h2 {
+  margin: 0 0 1rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+app-footer {
+  min-width: 100%;
+  position: absolute;
+  bottom: 0;
+}

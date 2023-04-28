@@ -1,0 +1,66 @@
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem 0;
+  width: 100%;
+  height: 105px;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: warp;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: #ccc;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.social a:hover {
+  color: #ccc;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
